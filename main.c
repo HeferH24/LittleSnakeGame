@@ -101,9 +101,7 @@ void move() {
 	if(map[Snake.head_y][Snake.head_x] == FOOD) {  // grows 
 		if(Snake.has_tail){       // growing with a tail ensures adding at least +1 body segment
 			map[pre_y][pre_x] = BODY_SEGMENT;
-			// silly code 
-			if(!Snake.has_body)  
-				Snake.has_body = true;
+			Snake.has_body = true;
 		} else {
 			map[pre_y][pre_x] = TAIL;
 			Snake.tail_x = pre_x; // first pos of the tail; before the head eats the first food 
