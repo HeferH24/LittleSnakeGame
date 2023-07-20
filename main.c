@@ -4,7 +4,6 @@
  the tail and the head, for each time the head moves
  the tail moves, keeping a constant distance (body)
 */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -48,7 +47,7 @@ void move();
 void getKey();
 void setup();
 void printMap();
-int get_rand(int start, int end);
+int getRand(int start, int end);
 void spawnFood();
    
 int main() {
@@ -171,13 +170,12 @@ void printMap() {
 	printf(">> Exit: q\n", count);
 }
 
-int get_rand(int start, int end) {
+int getRand(int start, int end) {
 	return rand() % (end-start) + start;
 }
 
 void spawnFood() {
-	int rand_x = get_rand(1, W-1);
-	int rand_y = get_rand(1, H-1);
+	int rand_x = getRand(1, W-1);
+	int rand_y = getRand(1, H-1);
 	map[rand_y][rand_x] = FOOD; 
 }
-
