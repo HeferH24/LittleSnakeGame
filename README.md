@@ -1,4 +1,4 @@
-# LittleSnakeGame
+# Little Snake Game (cli game)
 
 This is a tiny game that I made, it does not use any graphical library, so im only using basic standard I/O functions for "graphics".
 This is suposed to be a CLI game, currently I do not manage threads well enough to make it look better (maybe you always use a library like ncurses, sdl2, etc). 
